@@ -1,0 +1,30 @@
+$primary_color: #6E665B;
+$secondary_color: #328bc2;
+
+$info_color: #56aee5;
+$success_color: #83bd3f;
+$danger_color: #e15757;
+$warning_color: #f06a28;
+$lGrey_color: #f6f6f6;
+$dGrey_color:#00000066;
+$white_color: #fff;
+$dark_color: #1e1e1e;
+$black_color: #000000;
+
+$nav-border-color: rgba(255, 255, 255, 0.15);
+
+@mixin buttonTransparent {
+  background: transparent;
+  border: 0;
+}
+
+@mixin alignCentre {
+  display: flex;
+  align-items: center;
+}
+
+@mixin centre {
+  @include alignCentre();
+  justify-content: center;
+}
+

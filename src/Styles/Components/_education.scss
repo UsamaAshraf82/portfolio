@@ -1,0 +1,49 @@
+#education {
+    background: #fff;
+
+    .vertical-timeline-element-icon {
+        background: #ffffff;
+        box-shadow: 0 0 0 4px #6e665b, inset 0 2px 0 rgba(110, 102, 91,.08), 0 3px 0 4px rgba(110, 102, 91,.05);
+        img {
+            height: 60px;
+            width: 60px; 
+        }
+    }
+
+    .vertical-timeline-element-date {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .vertical-timeline-element-title {
+        margin: 0 -4px;
+        font-size: 18px;
+    }
+
+    .vertical-timeline-element-subtitle {
+        margin: 0 -4px;
+        font-size: 14px;
+
+        a {
+            color: #212529;
+            margin-left: 3px;
+        }
+    }
+
+    .vertical-timeline.vertical-timeline--two-columns:before {
+        border-left-color: #6e665b;
+    }
+
+
+    .vertical-timeline-element-content::before {
+        border-left-color: #6e665b;
+        margin-left: -3px
+    }
+
+    .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content::before, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content::before {
+        
+        border-color: transparent;
+        border-right-color: #6e665b;
+        margin-right:-3px
+    }
+}
