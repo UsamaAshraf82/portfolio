@@ -1,10 +1,17 @@
 @import 'Common/variable';
 
 .App-header {
-  background-color: $primary_color;
+  
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  background: $primary_color;
+  width: 100%;
+  z-index: 20;
 
   nav {
     padding: 0;
+    
   }
 
   .navbar-list {

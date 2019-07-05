@@ -19,10 +19,16 @@ hr {
   margin-bottom: 0;
 }
 
+.App{
+  background-image: url('../Images/background.jpg');
+  background-size: contain;
+  background-attachment: fixed;
+}
+
 .App-Main{
     
-  padding:30px 0;
-  background-color: lightgray;
+  margin-top: 84px;
+  padding-top: 30px;
 }
 
 .sections{
@@ -33,14 +39,14 @@ hr {
 .section
 {
   background-color: #fff;
-  margin-bottom:30px;
+  margin-bottom:40px;
   padding-left: 40px;
   padding-right: 40px;
 }
 
 .section:last-of-type
 {
-  margin-bottom:0;
+  margin-bottom:30px;
 }
 
 @import './Components/header';

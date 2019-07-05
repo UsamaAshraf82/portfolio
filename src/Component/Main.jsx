@@ -6,6 +6,8 @@ import About from './Section/About'
 import Objective from './Section/Objective'
 import Skill from './Section/Skills'
 import Education from './Section/Education'
+import Experience from './Section/Experience'
+
 class Main extends React.Component {
     render() {
         return (
@@ -21,6 +23,7 @@ class Main extends React.Component {
                             <Objective />
                             <Skill />
                             <Education />
+                            <Experience />
                         </div>
                     </div>
                 </div>

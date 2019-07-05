@@ -9,7 +9,7 @@ class Header extends React.Component {
         return (
             <header className="App-header">
 
-                <nav className="navbar navbar-expand-md">
+                <nav className="navbar navbar-expand-md container-fluid">
                     <button className="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -18,7 +18,7 @@ class Header extends React.Component {
 
                     <div className="collapse navbar-collapse " id="navbarTogglerDemo02">
                         <ul className={'navbar-list'}>
-                            <a href={'home'} className={'navbar-list-link'}>
+                            <a href={'#home'} className={'navbar-list-link'}>
                                 <li className={'navbar-list-item'}><FontAwesomeIcon icon={faHome}/></li>
                             </a>
                             <a href={'#about'} className={'navbar-list-link'}>

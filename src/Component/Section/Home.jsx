@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faStackOverflow, faGithub, faTwitter, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faStackOverflow, faGithub, faTwitter, faGithubSquare ,faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
 
 
 export default class Home extends React.Component {
@@ -52,6 +52,9 @@ export default class Home extends React.Component {
                             </a>
                             <a className="Logo" href="https://stackoverflow.com/users/5894166/usama-ashraf">
                                 <FontAwesomeIcon className="icon" icon={faStackOverflow} />
+                            </a>
+                            <a className="Logo" href="https://stackoverflow.com/users/5894166/usama-ashraf">
+                                <FontAwesomeIcon className="icon" icon={faLinkedinIn} />
                             </a>
                         </div>
                     </div>

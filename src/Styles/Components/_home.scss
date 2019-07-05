@@ -49,6 +49,12 @@
 
             .Logo{
                 padding:0 10px;
+                color: $primary_color;
+
+                &:hover
+                {
+                    color:$secondary_color;
+                }
                 .icon{
                     height: 20px;
                     width: 20px;

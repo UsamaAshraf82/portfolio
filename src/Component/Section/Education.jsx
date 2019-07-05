@@ -15,6 +15,7 @@ export default class Education extends React.Component {
     render() {
         return (
             <section className="container section" id="education">
+                <h3>Education</h3>
                <VerticalTimeline>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
@@ -22,14 +23,12 @@ export default class Education extends React.Component {
                         iconStyle={{  }}
                         icon = {<img src={Comsats} alt="Comsats" />}
                     >
-                        <h3 className="vertical-timeline-element-title">BS in Software Engineering</h3>
+                        <h1 className="vertical-timeline-element-title">BS in Software Engineering</h1>
                         <h4 className="vertical-timeline-element-subtitle">
                             Comsats University Islamabad 
                             <a href='lahore.comsats.edu.pk'><FontAwesomeIcon icon={faLink}/></a>
                         </h4>
-                        <p>
-                       ????????????????????????????????????
-                        </p>
+                   
                     </VerticalTimelineElement>
 
                     <VerticalTimelineElement
@@ -38,14 +37,12 @@ export default class Education extends React.Component {
                         iconStyle={{  }}
                         icon = {<img src={College} alt="College" />}
                     >
-                        <h3 className="vertical-timeline-element-title">ICS</h3>
+                        <h1 className="vertical-timeline-element-title">ICS</h1>
                         <h4 className="vertical-timeline-element-subtitle">
                         Govt. Postgraduate College of Science
                             <a href='www.google.com/search?q=govt+postgraduate+college+of+science+faisalabad'><FontAwesomeIcon icon={faLink}/></a>
                         </h4>
-                        <p>
-                       ????????????????????????????????????
-                        </p>
+                   
                     </VerticalTimelineElement>
                     
                     <VerticalTimelineElement
@@ -54,14 +51,12 @@ export default class Education extends React.Component {
                         iconStyle={{  }}
                         icon = {<img src={School} alt="School" />}
                     >
-                        <h3 className="vertical-timeline-element-title">Matric</h3>
+                        <h1 className="vertical-timeline-element-title">Matric</h1>
                         <h4 className="vertical-timeline-element-subtitle">
                         Kamil Foundation Secondary School
                             <a href='www.google.com/search?q=kamil+foundation+secondary+school+faisalabad'><FontAwesomeIcon icon={faLink}/></a>
                         </h4>
-                        <p>
-                       ????????????????????????????????????
-                        </p>
+                       
                     </VerticalTimelineElement>
 
                 </VerticalTimeline> 
