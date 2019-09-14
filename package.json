@@ -4,25 +4,19 @@
   "private": true,
   "homepage": "https://usamaashraf82.github.io/resume/",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.19",
-    "@fortawesome/free-brands-svg-icons": "^5.9.0",
-    "@fortawesome/free-regular-svg-icons": "^5.9.0",
-    "@fortawesome/free-solid-svg-icons": "^5.9.0",
-    "@fortawesome/react-fontawesome": "^0.1.4",
-    "bootstrap": "^4.3.1",
     "gh-pages": "^2.0.1",
-    "jquery": "^3.4.1",
+    "mdbreact": "^4.18.0",
     "node-sass": "^4.12.0",
+    "normalize.css": "^8.0.1",
     "react": "^16.8.6",
+    "react-cloudinary-lazy-image": "^1.2.3",
     "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "^3.0.1",
+    "react-slick": "^0.25.2",
     "react-vertical-timeline-component": "^2.4.0",
-    "reactstrap": "^8.0.0",
+    "slick-carousel": "^1.8.1",
     "webpack": "^4.29.6"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.5.0",
-    "@babel/core": "^7.5.0"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -40,5 +34,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "standard": "^14.2.0"
+  }
 }

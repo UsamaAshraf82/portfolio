@@ -1,20 +1,16 @@
-import React, {Component} from 'react';
-import Header from './Component/Header';
-import Main from './Component/Main';
-import Footer from './Component/Footer'
-
-import './Styles/Site.scss';
+import React, { Component } from 'react'
+import Header from './Component/Header'
+import Main from './Component/Main'
 
 class App extends Component {
-  render() {
+  render () {
     return (
-      <div className="App">
-          <Header/>
-          <Main/>
-          <Footer/>
+      <div className='App'>
+        <Header />
+        <Main />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

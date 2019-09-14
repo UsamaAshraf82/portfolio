@@ -1,45 +1,102 @@
-import React from 'react';
+import React from 'react'
+import {
+  MDBContainer
+} from 'mdbreact'
 
-const frameworks = importAll(require.context('../../Images/framework/', false, /\.(png)$/));
-const framework = Object.values(frameworks);
-const frameworkImg = framework.map((number) =>
-    <img key={frameworks} className='frameworkImg' src={number} alt= '' />
-);
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
-const langworks = importAll(require.context('../../Images/Lang/', false, /\.(png)$/));
-const langwork = Object.values(langworks);
-const langworkImg = langwork.map((number) =>
-    <img key={langworks} className='langImg' src={number} alt= '' />  
-);
-
-
-export default class Skill extends React.Component {
-    render() {
-        return (
-            <section className="container section" id="skill">
-               
-                    <h3>My Skills</h3>
-                
-                
-
-                <h4> Frameworks</h4>
-                <div className="skillImg">
-                {frameworkImg}
-                </div>
-                <h4>Language</h4>
-                <div className="skillImg">
-                {langworkImg}
-                </div>
-
-            </section>
-            
-        );
-    }
+const framework = []
+const lang = []
+const frameworks = importAll(require.context('../../Images/framework/', false, /\.(png)$/))
+for (var i = 0; i < frameworks[0].length; i++) {
+  framework.push({
+    name: frameworks[1][i].substr(2).slice(0, -4),
+    img: frameworks[0][i]
+  })
 }
 
-function importAll(r)
-{
-    let images = {};
-    r.keys().map((item, index) => {return images[item.replace('./', '')] = r(item); });
-    return images;
+const Langs = importAll(require.context('../../Images/Lang/', false, /\.(png)$/))
+for (i = 0; i < Langs[0].length; i++) {
+  lang.push({
+    name: Langs[1][i].substr(2).slice(0, -4),
+    img: Langs[0][i]
+  })
+}
+
+export default class Skill extends React.Component {
+  render () {
+    const settings = {
+      speed: 500,
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    }
+    return (
+      <section className='text-center my-5' id='skill'>
+        <MDBContainer>
+          <h1 className='h1-responsive font-weight-bold my-5'>
+            My Skills
+          </h1>
+          <h2> Frameworks</h2>
+          <Slider {...settings}>
+            {framework.map((i) =>
+              <React.Fragment key={i.name}>
+                <div className='SliderImgDiv'>
+                  <img className='SliderImg' src={i.img} alt={i.name} />
+                </div>
+                <p>{i.name}</p>
+              </React.Fragment>
+            )}
+          </Slider>
+
+          <h2>Languages</h2>
+          <Slider {...settings}>
+            {lang.map((i) =>
+              <React.Fragment key={i.name}>
+                <div className='SliderImgDiv'>
+                  <img className='SliderImg' src={i.img} alt={i.name} />
+                </div>
+                <p>{i.name}</p>
+              </React.Fragment>
+            )}
+          </Slider>
+        </MDBContainer>
+
+      </section>
+
+    )
+  }
+}
+
+function importAll (r) {
+  return [r.keys().map(r), r.keys()]
 }

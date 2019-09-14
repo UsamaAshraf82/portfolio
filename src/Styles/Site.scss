@@ -1,57 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Roboto:300,400,500,700');
 
-a, a:active, a:focus, a:hover,
-select,
-input:focus,
-button, button:focus, button:active,
-.btn.active:focus, .btn.focus,
-.btn.focus:active, .btn.active.focus,
-.nav-link:hover {
-  outline: none !important;
-  box-shadow: none !important;
-  text-decoration: none !important;
-  cursor: pointer;
-  border-radius: 2px !important;
-}
 
-hr {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.App{
-  background-image: url('../Images/background.jpg');
-  background-size: contain;
-  background-attachment: fixed;
-}
-
-.App-Main{
-    
-  margin-top: 84px;
-  padding-top: 30px;
-}
-
-.sections{
-  padding-left: 0;  
-  margin-left: 437px;
-}
-
-.section
-{
-  background-color: #fff;
-  margin-bottom:40px;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-.section:last-of-type
-{
-  margin-bottom:30px;
-}
-
-@import './Components/header';
-@import './Components/profilePic';
-@import './Components/home';
-@import './Components/about-obj';
+// @import './Components/header';
+// @import './Components/profilePic';
+// @import './Components/home';
+// @import './Components/about-obj';
 @import './Components/skill';
 @import './Components/education';

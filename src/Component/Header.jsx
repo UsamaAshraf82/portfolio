@@ -1,53 +1,40 @@
-import React from 'react';
+import React from 'react'
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarToggler, MDBCollapse } from 'mdbreact'
 
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faHome} from '@fortawesome/free-solid-svg-icons';
-
+import Profile from '../Images/Profile.jpg'
 
 class Header extends React.Component {
-    render() {
-        return (
-            <header className="App-header">
-
-                <nav className="navbar navbar-expand-md container-fluid">
-                    <button className="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div className="collapse navbar-collapse " id="navbarTogglerDemo02">
-                        <ul className={'navbar-list'}>
-                            <a href={'#home'} className={'navbar-list-link'}>
-                                <li className={'navbar-list-item'}><FontAwesomeIcon icon={faHome}/></li>
-                            </a>
-                            <a href={'#about'} className={'navbar-list-link'}>
-                                <li className={'navbar-list-item'}>About</li>
-                            </a>
-                            <a href={'#objective'} className={'navbar-list-link'}>
-                                <li className={'navbar-list-item'}>Objective</li>
-                            </a>
-                            <a href={'#skill'} className={'navbar-list-link'}>
-                                <li className={'navbar-list-item'}>Skill</li>
-                            </a>
-                            <a href={'#education'} className={'navbar-list-link'}>
-                                <li className={'navbar-list-item'}>Education</li>
-                            </a>
-                            <a href={'#experience'} className={'navbar-list-link'}>
-                                <li className={'navbar-list-item'}>Experience</li>
-                            </a>
-                            <a href={'#contact'} className={'navbar-list-link'}>
-                                <li className={'navbar-list-item'}>Contact</li>
-                            </a>
-                        </ul>
-
-                    </div>
-                </nav>
-
-
-            </header>
-        );
+  constructor (props) {
+    super(props)
+    this.state = {
+      collapse: false,
+      isWideEnough: false
     }
+    this.handleOnClick = this.handleOnClick.bind(this)
+  }
+
+  handleOnClick () {
+    this.setState({
+      collapse: !this.state.collapse
+    })
+  }
+
+  render () {
+    return (
+      <header className='App-Header'>
+
+        <MDBNavbar color='black' dark expand='md' fixed='top'>
+          <MDBNavbarBrand href='/'>
+            <img src={Profile} alt='Logo Full' style={{ width: '30px', 'border-radius': '110px' }} />
+                Muhammad Usama Ashraf
+          </MDBNavbarBrand>
+          {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.handleOnClick} />}
+          <MDBCollapse isOpen={this.state.collapse} navbar />
+        </MDBNavbar>
+      </header>
+
+    )
+  }
 }
 
-export default Header;
+export default Header

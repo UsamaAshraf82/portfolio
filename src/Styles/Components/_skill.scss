@@ -2,32 +2,15 @@
 
 #skill
 {
-    h3{
-        font-size: 22px;
-        color: $dGrey_color;
-        padding: 30px 0;
-        font-family: "Roboto", Helvetica, Arial, sans-serif;
-      
+   
+        .SliderImgDiv
+        {
+            display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+    .SliderImg{
+        height: 80%;
     }
-    h4{
-        font-size: 24px;
-        font-family: "Roboto", Helvetica, Arial, sans-serif;
-        color: $black_color;
-        padding-bottom: 10px;
-    }
-
-    .skillImg{
-    display: grid;
-    grid-template-columns: 33.3% 33.3% 33.4%;
-    grid-row-gap: 20px;
-    padding-bottom: 30px;
-        .frameworkImg{
-            height: 60px;   
-            justify-self: center;
-            }
-            .langImg{
-            height: 60px;
-            justify-self: center;
         }
-    }
 }
