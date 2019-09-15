@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  MDBContainer
+  MDBContainer, MDBRow, MDBCol
 } from 'mdbreact'
 
 import Slider from 'react-slick'
@@ -66,29 +66,36 @@ export default class Skill extends React.Component {
           <h1 className='h1-responsive font-weight-bold my-5'>
             My Skills
           </h1>
-          <h2> Frameworks</h2>
-          <Slider {...settings}>
-            {framework.map((i) =>
-              <React.Fragment key={i.name}>
-                <div className='SliderImgDiv'>
-                  <img className='SliderImg' src={i.img} alt={i.name} />
-                </div>
-                <p>{i.name}</p>
-              </React.Fragment>
-            )}
-          </Slider>
-
-          <h2>Languages</h2>
-          <Slider {...settings}>
-            {lang.map((i) =>
-              <React.Fragment key={i.name}>
-                <div className='SliderImgDiv'>
-                  <img className='SliderImg' src={i.img} alt={i.name} />
-                </div>
-                <p>{i.name}</p>
-              </React.Fragment>
-            )}
-          </Slider>
+          <MDBRow>
+            <MDBCol>
+              <h2> Frameworks</h2>
+              <Slider {...settings}>
+                {framework.map((i) =>
+                  <React.Fragment key={i.name}>
+                    <div className='SliderImgDiv'>
+                      <img className='SliderImg' src={i.img} alt={i.name} />
+                    </div>
+                    <p>{i.name}</p>
+                  </React.Fragment>
+                )}
+              </Slider>
+            </MDBCol>
+          </MDBRow>
+          <MDBRow className='mt-5'>
+            <MDBCol>
+              <h2>Languages</h2>
+              <Slider {...settings}>
+                {lang.map((i) =>
+                  <React.Fragment key={i.name}>
+                    <div className='SliderImgDiv'>
+                      <img className='SliderImg' src={i.img} alt={i.name} />
+                    </div>
+                    <p>{i.name}</p>
+                  </React.Fragment>
+                )}
+              </Slider>
+            </MDBCol>
+          </MDBRow>
         </MDBContainer>
 
       </section>

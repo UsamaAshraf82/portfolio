@@ -5,12 +5,12 @@ class About extends React.Component {
   render () {
     return (
 
-      <section className=' text-center my-5' id='Services'>
+      <section className=' text-center my-5' id='about'>
         <MDBContainer>
           <h1 className='h1-responsive font-weight-bold my-5'>
             About Me
           </h1>
-          <p className='lead grey-text w-responsive mx-auto mb-5'>
+          <p className='lead grey-text w-responsive mx-auto mb-5 justify-center'>
             I graduated from Comsats University Islamabad, Lahore Campus.
                             Now, I am looking for my first full-time job. I cannot say with 100%
                             confidence where I see myself in five years or what my big career goal is.
@@ -42,7 +42,7 @@ class About extends React.Component {
               <a href='mailto:usamaashraf82@live.com' className='grey-text'>usamaashraf82@live.com</a>
             </MDBCol>
           </MDBRow>
-          <MDBRow className=''>
+          <MDBRow className='mt-3'>
             <MDBCol md='1' />
             <MDBCol md='5'>
               <MDBIcon icon='business-time' size='3x' className='red-text' />
