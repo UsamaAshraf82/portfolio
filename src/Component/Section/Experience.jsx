@@ -16,7 +16,7 @@ export default class Experience extends React.Component {
           <VerticalTimeline>
             <VerticalTimelineElement
               className='vertical-timeline-element--work'
-              date='Jul 2018 - Aug 2019'
+              date='Jul 2018 - Aug 2018'
               iconStyle={{ background: '#6e665b' }}
               icon={<img src={Approsoft} alt='Approsoft' />}
             >
