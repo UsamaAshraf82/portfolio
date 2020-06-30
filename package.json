@@ -1,41 +1,54 @@
 {
-  "name": "resume",
-  "version": "1.0.1",
+  "name": "usamaashraf82-portfolio",
   "private": true,
-  "homepage": "https://usamaashraf82.github.io/resume/",
+  "description": "A Personal Portfolio Website For Myself usamaashraf82",
+  "version": "3.0.0",
+  "author": "Usama Ashraf <usamaashraf82@live.com>",
   "dependencies": {
-    "gh-pages": "^2.0.1",
-    "mdbreact": "^4.18.0",
-    "node-sass": "^4.12.0",
-    "normalize.css": "^8.0.1",
-    "react": "^16.8.6",
-    "react-cloudinary-lazy-image": "^1.2.3",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "^3.0.1",
-    "react-slick": "^0.25.2",
-    "react-vertical-timeline-component": "^2.4.0",
-    "slick-carousel": "^1.8.1",
-    "webpack": "^4.29.6"
+    "@fortawesome/fontawesome-svg-core": "^1.2.29",
+    "@fortawesome/free-brands-svg-icons": "^5.13.1",
+    "@fortawesome/free-regular-svg-icons": "^5.13.1",
+    "@fortawesome/free-solid-svg-icons": "^5.13.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "bootstrap": "^4.5.0",
+    "boxicons": "^2.0.5",
+    "gatsby": "^2.23.10",
+    "gatsby-image": "^2.4.8",
+    "gatsby-plugin-manifest": "^2.4.13",
+    "gatsby-plugin-offline": "^3.2.12",
+    "gatsby-plugin-react-helmet": "^3.3.5",
+    "gatsby-plugin-sass": "^2.3.6",
+    "gatsby-plugin-sharp": "^2.6.13",
+    "gatsby-source-filesystem": "^2.3.13",
+    "gatsby-transformer-sharp": "^2.5.6",
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
+    "react-icofont": "^1.0.19",
+    "react-typed": "^1.2.0"
   },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UsamaAshraf82/portfolio.git"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "standard": "^14.2.0"
-  }
+  ]
 }
