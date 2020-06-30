@@ -15,7 +15,7 @@ import '../assets/CSS/Site.css'
 
 import '../assets/FaLibrary/FaLibrary'
 
-import Header from './header'
+import Header from './Header'
 import Hero from './Section/Hero'
 import Footer from './Footer'
 import PersonalData from '../assets/Data'
