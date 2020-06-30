@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import 'bootstrap/dist/css/bootstrap.css'
 // import 'boxicons/css/boxicons.min.css'
-import '../assets/CSS/Site.css'
+import '../assets/CSS/site.css'
 
 import '../assets/FaLibrary/FaLibrary'
 
