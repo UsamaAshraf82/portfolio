@@ -6,7 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-
+    `gatsby-plugin-fontawesome-css`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
