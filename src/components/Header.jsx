@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import Icofont from 'react-icofont'
+// import Icofont from 'react-icofont'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { Nav } from 'react-bootstrap'
