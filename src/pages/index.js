@@ -14,19 +14,6 @@ const IndexPage = props => {
 
   let wrapperRef = useRef()
 
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setLoading('')
-    }, 100)
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId)
-      }
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [handleClickOutside])
-
   const setWrapperRef = node => {
     wrapperRef = node
   }
@@ -64,6 +51,19 @@ const IndexPage = props => {
       }
     }
   }
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setLoading('')
+    }, 100)
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+      }
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [handleClickOutside])
 
   return (
     <Layout location={props.location}>
