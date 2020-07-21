@@ -1,21 +1,91 @@
-import React from 'react'
-// import { Link } from 'gatsby'
+import React, { useEffect, useRef, useState } from 'react'
+import Layout from '../components/layout'
 
-import Layout from '../components/Layout'
-// import Image from '../components/image'
-import SEO from '../components/Seo'
-import About from '../components/Section/About'
-import Skill from '../components/Section/Skill'
-import { useStaticQuery, graphql } from 'gatsby'
+import Header from '../components/Header'
+import Main from '../components/Main'
+import Footer from '../components/Footer'
 
-import PersonalData from '../assets/Data'
+const IndexPage = props => {
+  const [isArticleVisible, setIsArticleVisible] = useState(false)
+  const [timeout, setTimeoutState] = useState(false)
+  const [articleTimeout, setArticleTimeout] = useState(false)
+  const [article, setArtcile] = useState('')
+  const [loading, setLoading] = useState('is-loading')
 
-const IndexPage = () => {
+  let wrapperRef = useRef()
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setLoading('')
+    }, 100)
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+      }
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [handleClickOutside])
+
+  const setWrapperRef = node => {
+    wrapperRef = node
+  }
+
+  const handleOpenArticle = article => {
+    setIsArticleVisible(!setIsArticleVisible)
+    setArtcile(article)
+
+    setTimeout(() => {
+      setTimeoutState(!timeout)
+    }, 325)
+
+    setTimeout(() => {
+      setArticleTimeout(!articleTimeout)
+    }, 350)
+  }
+
+  const handleCloseArticle = () => {
+    setArticleTimeout(!articleTimeout)
+
+    setTimeout(() => {
+      setTimeoutState(!timeout)
+    }, 325)
+
+    setTimeout(() => {
+      setIsArticleVisible(!setIsArticleVisible)
+      setArtcile('')
+    }, 350)
+  }
+
+  const handleClickOutside = event => {
+    if (wrapperRef && !wrapperRef.contains(event.target)) {
+      if (isArticleVisible) {
+        handleCloseArticle()
+      }
+    }
+  }
+
   return (
-    <Layout>
-      <SEO title='' />
-      <About about={PersonalData.about} />
-      <Skill skills={PersonalData.skills} />
+    <Layout location={props.location}>
+      <div
+        className={`body ${loading} ${
+          isArticleVisible ? 'is-article-visible' : ''
+        }`}
+      >
+        <div id="wrapper">
+          <Header onOpenArticle={handleOpenArticle} timeout={timeout} />
+          <Main
+            isArticleVisible={isArticleVisible}
+            timeout={timeout}
+            articleTimeout={articleTimeout}
+            article={article}
+            onCloseArticle={handleCloseArticle}
+            setWrapperRef={setWrapperRef}
+          />
+          <Footer timeout={timeout} />
+        </div>
+        <div id="bg"></div>
+      </div>
     </Layout>
   )
 }
