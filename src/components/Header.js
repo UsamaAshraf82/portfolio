@@ -6,7 +6,7 @@ import My_Data from '../My_Data'
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
     <div className="logo">
-      <span className="icon fa-diamond"></span>
+      <span className="icon fas fa-laptop-code"></span>
     </div>
     <div className="content">
       <div className="inner">
@@ -41,7 +41,7 @@ const Header = props => (
           </button>
         </li>
 
-        <li>
+        {/* <li>
           <button
             onClick={() => {
               props.onOpenArticle('about')
@@ -49,7 +49,7 @@ const Header = props => (
           >
             About
           </button>
-        </li>
+        </li> */}
         <li>
           <button
             onClick={() => {

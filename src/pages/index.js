@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState, useCallback } from 'react'
 import Layout from '../components/layout'
 
 import Header from '../components/Header'
@@ -19,38 +19,40 @@ const IndexPage = props => {
   }
 
   const handleOpenArticle = article => {
-    setIsArticleVisible(!setIsArticleVisible)
+    setIsArticleVisible(true)
     setArtcile(article)
 
     setTimeout(() => {
-      setTimeoutState(!timeout)
+      setTimeoutState(true)
     }, 325)
 
     setTimeout(() => {
-      setArticleTimeout(!articleTimeout)
+      setArticleTimeout(true)
     }, 350)
   }
 
-  const handleCloseArticle = () => {
-    setArticleTimeout(!articleTimeout)
-
+  const handleCloseArticle = useCallback(() => {
+    setArticleTimeout(false)
     setTimeout(() => {
-      setTimeoutState(!timeout)
+      setTimeoutState(false)
     }, 325)
 
     setTimeout(() => {
-      setIsArticleVisible(!setIsArticleVisible)
+      setIsArticleVisible(false)
       setArtcile('')
     }, 350)
-  }
+  }, [])
 
-  const handleClickOutside = event => {
-    if (wrapperRef && !wrapperRef.contains(event.target)) {
-      if (isArticleVisible) {
-        handleCloseArticle()
+  const handleClickOutside = useCallback(
+    event => {
+      if (wrapperRef && !wrapperRef.contains(event.target)) {
+        if (isArticleVisible) {
+          handleCloseArticle()
+        }
       }
-    }
-  }
+    },
+    [handleCloseArticle, isArticleVisible]
+  )
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -79,6 +81,7 @@ const IndexPage = props => {
             timeout={timeout}
             articleTimeout={articleTimeout}
             article={article}
+            changeArticle={handleOpenArticle}
             onCloseArticle={handleCloseArticle}
             setWrapperRef={setWrapperRef}
           />

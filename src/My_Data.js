@@ -1,7 +1,10 @@
-import { Marooze, YBits } from './images/ImageLibrary'
+import { Marooze, YBits, Avatar, HappinessMeter } from './images/ImageLibrary'
 
 const My_Data = {
   name: 'Muhammad Usama Ashraf',
+  avatar: Avatar,
+  intro:
+    '<p>Ever since I can remember, I have been interested in technology, and would constantly be on the computer tinkering, and reading about the latest and greatest gadgets. After getting my first computer at age 8, I was hooked. My path as a geek was set. With my interest in games, and how they work, I started to learn and grow as a programmer. It would be my honor to help make technology work for you!</p><p style="text-align: center;">Stack-Overflow Presence<br><a href="https://stackoverflow.com/users/5894166/muhammad-usama-ashraf" style="border:0;"><img src="https://stackoverflow.com/users/flair/5894166.png?theme=dark" width="208" height="58" alt="profile for Muhammad Usama Ashraf at Stack Overflow, Q&A for professional and enthusiast programmers" title="profile for Muhammad Usama Ashraf at Stack Overflow, Q&A for professional and enthusiast programmers" class="fr-fic fr-dii"></a></p><h3><strong>Always Learning</strong></h3><p><strong>Once a Student always a Students</strong></p>',
   who: [
     'Software Engineer',
     'Front-End Developer',
@@ -23,6 +26,7 @@ const My_Data = {
       description:
         'A Platform for Fashion Community. Models, Photographer, Makeup Artist, Hairstylist, Content Creator, Agency. Made using ReactJS, Typescript ,Sass , Redux',
       status: 'Under Development',
+      work: 'Frontend, From Scratch',
       link: 'http://www.marooze.com',
     },
     {
@@ -30,7 +34,17 @@ const My_Data = {
       img: YBits,
       description: 'Say hello to secure file sharing',
       status: 'Live',
+      work: 'Update UI',
       link: 'https://ybits.io/info',
+    },
+    {
+      app_name: 'Happiness Meter',
+      img: HappinessMeter,
+      description:
+        'Making the world a happier place, one happier person at a time.',
+      status: 'Live',
+      work: 'Update UI',
+      link: 'https://myhappinessmeter.com',
     },
   ],
   skills: [

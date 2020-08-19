@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { useEffect, useCallback } from 'react'
-import pic01 from '../images/pic01.jpg'
-import pic02 from '../images/pic02.jpg'
-import pic03 from '../images/pic03.jpg'
+import parse from 'html-react-parser'
 import My_Data from '../My_Data'
 
 const Main = props => {
@@ -16,11 +14,14 @@ const Main = props => {
     />
   )
 
-  const closeBtn = useCallback(e => {
-    if (e.key === 'Escape') {
-      props.onCloseArticle()
-    }
-  }, [])
+  const closeBtn = useCallback(
+    e => {
+      if (e.key === 'Escape') {
+        props.onCloseArticle()
+      }
+    },
+    [props]
+  )
 
   useEffect(() => {
     if (props.article !== '') {
@@ -45,28 +46,16 @@ const Main = props => {
           style={{ display: 'none' }}
         >
           <h2 className="major">Intro</h2>
-          <span className="image main">
-            <img src={pic01} alt="" />
-          </span>
+          <div className="centre">
+            <span className="image main">
+              <img src={My_Data.avatar} alt="" />
+            </span>
+          </div>
+          {parse(My_Data.intro)}
           <p>
-            Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-            aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-            convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
-            magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas.
-            By the way, check out my <a href="#work">awesome work</a>.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-            dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos. Etiam tristique
-            libero eu nibh porttitor fermentum. Nullam venenatis erat id
-            vehicula viverra. Nunc ultrices eros ut ultricies condimentum.
-            Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae
-            dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in
-            lectus. Pellentesque habitant morbi tristique senectus et netus et
-            malesuada fames ac turpis egestas. In non lorem sit amet elit
-            placerat maximus. Pellentesque aliquam maximus risus, vel sed
-            vehicula.
+            <button onClick={() => props.changeArticle('work')}>
+              Check Out My Works
+            </button>
           </p>
           {close()}
         </article>
@@ -80,22 +69,23 @@ const Main = props => {
           style={{ display: 'none' }}
         >
           <h2 className="major">Work</h2>
-          {My_Data.works.map(work => (
-            <>
+          {My_Data.works.map((work, index) => (
+            <div key={index}>
               <h3 className="major">{work.app_name}</h3>
               <span className="image main">
                 <img src={work.img} alt="" />
               </span>
               <p>Status : {work.status}</p>
+              <p>Work : {work.work}</p>
               <p>{work.description}</p>
               <a href={work.link}>{work.link}</a>
-            </>
+            </div>
           ))}
 
           {close()}
         </article>
       )}
-      {props.article === 'about' && (
+      {/* {props.article === 'about' && (
         <article
           id="about"
           className={`${props.article === 'about' ? 'active' : ''} ${
@@ -118,7 +108,7 @@ const Main = props => {
           </p>
           {close()}
         </article>
-      )}
+      )} */}
       {props.article === 'contact' && (
         <article
           id="contact"
@@ -131,22 +121,45 @@ const Main = props => {
           <form method="post" action="#">
             <div className="field half first">
               <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
+              <input
+                type="text"
+                name="name"
+                id="name"
+                value="Not Ready Yet"
+                disabled
+              />
             </div>
             <div className="field half">
               <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
+              <input
+                type="text"
+                name="email"
+                value="Not Ready Yet"
+                id="email"
+                disabled
+              />
             </div>
             <div className="field">
               <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4"></textarea>
+              <textarea
+                name="message"
+                id="message"
+                value="Not Ready Yet"
+                rows="4"
+                disabled
+              ></textarea>
             </div>
             <ul className="actions">
               <li>
-                <input type="submit" value="Send Message" className="special" />
+                <input
+                  type="submit"
+                  value="Send Message"
+                  className="special"
+                  disabled
+                />
               </li>
               <li>
-                <input type="reset" value="Reset" />
+                <input type="reset" value="Reset" disabled />
               </li>
             </ul>
           </form>
@@ -154,7 +167,7 @@ const Main = props => {
             <li>
               <a
                 href={`https://www.twitter.com/${My_Data.social.twitter}`}
-                className="icon fa-twitter"
+                className="icon fab fa-twitter"
               >
                 <span className="label">Twitter</span>
               </a>
@@ -162,7 +175,7 @@ const Main = props => {
             <li>
               <a
                 href={`https://www.facebook.com/${My_Data.social.facebook}`}
-                className="icon fa-facebook"
+                className="icon fab fa-facebook"
               >
                 <span className="label">Facebook</span>
               </a>
@@ -170,7 +183,7 @@ const Main = props => {
             <li>
               <a
                 href={`https://www.instagram.com/${My_Data.social.instagram}`}
-                className="icon fa-instagram"
+                className="icon fab fa-instagram"
               >
                 <span className="label">Instagram</span>
               </a>
@@ -178,7 +191,7 @@ const Main = props => {
             <li>
               <a
                 href={`https://www.github.com/${My_Data.social.github}`}
-                className="icon fa-github"
+                className="icon fab fa-github"
               >
                 <span className="label">GitHub</span>
               </a>
@@ -186,7 +199,7 @@ const Main = props => {
             <li>
               <a
                 href={`https://api.whatsapp.com/send?phone=${My_Data.social.whatsapp}`}
-                className="icon fa-whatsapp"
+                className="icon fab fa-whatsapp"
               >
                 <span className="label">Whatsapp</span>
               </a>
@@ -194,7 +207,7 @@ const Main = props => {
             <li>
               <a
                 href={`https://www.linkedin.com/${My_Data.social.linkedin}`}
-                className="icon fa-linkedin"
+                className="icon fab fa-linkedin"
               >
                 <span className="label">Linked In</span>
               </a>
@@ -213,6 +226,7 @@ Main.propTypes = {
   articleTimeout: PropTypes.bool,
   onCloseArticle: PropTypes.func,
   timeout: PropTypes.bool,
+  changeArticle: PropTypes.func,
   setWrapperRef: PropTypes.func.isRequired,
 }
 

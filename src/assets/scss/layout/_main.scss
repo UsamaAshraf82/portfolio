@@ -35,6 +35,15 @@
     border-radius: _size(border-radius);
     opacity: 0;
 
+    &#intro {
+      .image.main {
+        width: 250px;
+        img {
+          width: 250px;
+        }
+      }
+    }
+
     &#work {
       h3.major {
         margin-top: 0.8rem;
