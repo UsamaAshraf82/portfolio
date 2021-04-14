@@ -1,4 +1,10 @@
-import { Marooze, YBits, Avatar, HappinessMeter } from './images/ImageLibrary'
+import {
+  Marooze,
+  YBits,
+  Avatar,
+  HappinessMeter,
+  BeiTeck,
+} from './images/ImageLibrary'
 
 const My_Data = {
   name: 'Muhammad Usama Ashraf',
@@ -24,10 +30,18 @@ const My_Data = {
       app_name: 'Marooze',
       img: Marooze,
       description:
-        'A Platform for Fashion Community. Models, Photographer, Makeup Artist, Hairstylist, Content Creator, Agency. Made using ReactJS, Typescript ,Sass , Redux',
+        'A Platform for Fashion Community. Models, Photographer, Makeup Artist, Hairstylist, Content Creator, Agency.',
       status: 'Under Development',
-      work: 'Frontend, From Scratch',
+      work: 'Frontend, Backend, From Scratch',
       link: 'http://www.marooze.com',
+    },
+    {
+      app_name: 'BeiTeck',
+      img: BeiTeck,
+      description: 'A Rental Marketplace used based in Lebanon.',
+      status: 'Live, Beta Only for Brokers',
+      work: 'Frontend, Backend, From Scratch',
+      link: 'https://beiteck.com',
     },
     {
       app_name: 'Y-Bits',
@@ -50,12 +64,13 @@ const My_Data = {
   skills: [
     { skill: 'HTML', value: 100 },
     { skill: 'CSS (SCSS)', value: 100 },
-    { skill: 'JAVASCRIPT', value: 90 },
-    { skill: 'REACT', value: 90 },
-    { skill: 'NODE-JS (EXPRESS)', value: 40 },
-    { skill: 'MONGODB', value: 40 },
-    { skill: 'SQL', value: 40 },
-    { skill: 'PHOTOSHOP', value: 25 },
+    { skill: 'JavaScript', value: 100 },
+    { skill: 'React', value: 95 },
+    { skill: 'NODE-JS (EXPRESS)', value: 90 },
+    { skill: 'mongoDB', value: 90 },
+    { skill: 'SQL', value: 30 },
+    { skill: 'Adobo Photoshop', value: 30 },
+    { skill: 'Adobe XD', value: 50 },
   ],
 }
 
