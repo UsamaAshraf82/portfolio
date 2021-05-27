@@ -26,15 +26,15 @@ const My_Data = {
     whatsapp: '+923130732539',
   },
   works: [
-    {
-      app_name: 'Marooze',
-      img: Marooze,
-      description:
-        'A Platform for Fashion Community. Models, Photographer, Makeup Artist, Hairstylist, Content Creator, Agency.',
-      status: 'Under Development',
-      work: 'Frontend, Backend, From Scratch',
-      link: 'http://www.marooze.com',
-    },
+    // {
+    //   app_name: 'Marooze',
+    //   img: Marooze,
+    //   description:
+    //     'A Platform for Fashion Community. Models, Photographer, Makeup Artist, Hairstylist, Content Creator, Agency.',
+    //   status: 'Under Development',
+    //   work: 'Frontend, Backend, From Scratch',
+    //   link: 'http://www.marooze.com',
+    // },
     {
       app_name: 'BeiTeck',
       img: BeiTeck,
