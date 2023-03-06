@@ -1,0 +1,23 @@
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended", "next/core-web-vitals", "next", "prettier"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "quotes": ["warn", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+    "import/imports-first": ["warn", "absolute-first"],
+    "linebreak-style": [0],
+    "no-unused-vars": ["warn"],
+    "no-case-declarations": "off",
+    "react/no-unknown-property": [1],
+    "react/no-unescaped-entities": ["error", { "forbid": [">", "}"] }],
+    "react/jsx-key": [1],
+    "react/prop-types": [0],
+    "react/display-name": [0]
+  }
+}
