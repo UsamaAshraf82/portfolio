@@ -1,4 +1,5 @@
 import { InfoContext } from '@/pages/_app';
+import Link from 'next/link';
 import { useContext } from 'react';
 
 const Navbar = () => {
@@ -8,7 +9,7 @@ const Navbar = () => {
     <div className='navbar fixed z-50  bg-base-100'>
       <div className='navbar-start'>
         <div className='dropdown'>
-          <label tabIndex={0} className='btn btn-ghost lg:hidden'>
+          <label tabIndex={0} className='btn-ghost btn lg:hidden'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               className='h-5 w-5'
@@ -30,25 +31,23 @@ const Navbar = () => {
           >
             {info.sections.map((section) => (
               <li key={section}>
-                <a href={`#${section}`}>{section}</a>
+                <Link href={`#${section}`}>{section}</Link>
               </li>
             ))}
-            <li>
-              <a target='_blank' href='/Resume.pdf' rel='noreferrer'>
-                Resume
-              </a>
-            </li>
           </ul>
         </div>
-        <a href='' className='btn btn-ghost text-xl normal-case text-accent'>
+        <Link
+          href='/'
+          className='btn-ghost btn text-xl normal-case text-accent'
+        >
           {info.name}
-        </a>
+        </Link>
       </div>
       <div className='navbar-end hidden lg:flex'>
         <ul className='menu menu-horizontal p-0'>
           {info.sections.map((section) => (
             <li key={section}>
-              <a href={`#${section}`}>{section}</a>
+              <Link href={`#${section}`}>{section}</Link>
             </li>
           ))}
         </ul>

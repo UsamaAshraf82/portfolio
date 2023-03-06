@@ -49,26 +49,10 @@ const FeaturedProject = ({
             </a>
             <div className='flex flex-wrap gap-2'>
               {technologies.map((tech, i) => {
-                //let's make the badges different colors to add some pizzazz
-                const badgeColors = [
-                  'badge-primary',
-                  'badge-secondary',
-                  'badge-accent',
-                  'badge-ghost',
-                  'badge-primary',
-                  'badge-secondary',
-                  'badge-accent',
-                  'badge-ghost',
-                  'badge-primary',
-                  'badge-secondary',
-                  'badge-accent',
-                  'badge-ghost',
-                ];
-
                 return (
                   <div
                     key={i}
-                    className={`badge ${badgeColors[i]} p-3 text-xl`}
+                    className={`badge ${badgeColors[i]} p-3 text-xl text-white`}
                   >
                     {tech}
                   </div>
@@ -78,7 +62,7 @@ const FeaturedProject = ({
             <div className='my-4'>{summary}</div>
             <div className='flex gap-2'>
               <a
-                className='btn btn-primary w-1/5'
+                className='btn-primary btn w-1/5'
                 href={link}
                 target='_blank'
                 rel='noreferrer'
@@ -97,25 +81,11 @@ const FeaturedProject = ({
             <div className='flex flex-wrap gap-2'>
               {technologies.map((tech, i) => {
                 //let's make the badges different colors to add some pizzazz
-                const badgeColors = [
-                  'badge-primary',
-                  'badge-secondary',
-                  'badge-accent',
-                  'badge-ghost',
-                  'badge-primary',
-                  'badge-secondary',
-                  'badge-accent',
-                  'badge-ghost',
-                  'badge-primary',
-                  'badge-secondary',
-                  'badge-accent',
-                  'badge-ghost',
-                ];
 
                 return (
                   <div
                     key={i}
-                    className={`badge ${badgeColors[i]} p-3 text-xl`}
+                    className={`badge ${badgeColors[i]} p-3 text-xl text-white`}
                   >
                     {tech}
                   </div>
@@ -125,7 +95,7 @@ const FeaturedProject = ({
             <div className='my-4'>{summary}</div>
             <div className='flex gap-2'>
               <a
-                className='btn btn-primary w-1/5'
+                className='btn-primary btn w-1/5'
                 href={link}
                 target='_blank'
                 rel='noreferrer'
@@ -147,3 +117,17 @@ const FeaturedProject = ({
 };
 
 export default FeaturedProject;
+const badgeColors = [
+  'bg-slate-600 border-slate-600',
+  'bg-stone-600 border-stone-600',
+  'bg-red-600 border-red-600',
+  'bg-orange-600 border-orange-600',
+  'bg-yellow-600 border-yellow-600',
+  'bg-green-600 border-green-600',
+  'bg-teal-600 border-teal-600',
+  'bg-cyan-600 border-cyan-600',
+  'bg-sky-600 border-sky-600',
+  'bg-indigo-600 border-indigo-600',
+  'bg-purple-600 border-purple-600',
+  'bg-rose-600 border-rose-600',
+];

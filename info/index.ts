@@ -71,7 +71,7 @@ const info = {
       summary: `Each of us has a built-in emotional meter. It's standard equipment at birth. The visual below represents that emotional feedback system we all have inside of us. We call it your Happiness Meter®. Using it to stay in touch with your emotions can improve your decision making and increase the joy in your life.`,
       image: happiness,
 
-      link: 'https://www.happiness .com',
+      link: 'https://myhappinessmeter.com',
       technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Firebase'],
     },
   ],
