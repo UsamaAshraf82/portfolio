@@ -1,5 +1,6 @@
 import info from '@/info';
 import '@/styles/globals.css';
+import { Analytics } from '@vercel/analytics/react';
 import { AppProps } from 'next/dist/pages/_app';
 import Head from 'next/head';
 import React from 'react';
@@ -27,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <InfoContext.Provider value={info}>
         <Component {...pageProps} />
       </InfoContext.Provider>
+      <Analytics />
     </>
   );
 }
