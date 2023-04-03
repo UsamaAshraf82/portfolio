@@ -2,7 +2,6 @@ import hrdoc from '@/public/24hrdoc.png';
 import beiteck from '@/public/beiteck.png';
 import happiness from '@/public/happiness.png';
 import profile from '@/public/profile.jpg';
-import putgang from '@/public/putgang.png';
 
 const info = {
   name: 'Usama Ashraf',
@@ -44,14 +43,14 @@ const info = {
         'React Bootstrap',
       ],
     },
-    {
-      name: 'PutGang',
-      summary:
-        'Put Gang is a stock options community that shows how easy it is to profit no matter what happens in the market. We make trading simple!',
-      image: putgang,
-      link: 'https://www.putgang.com/',
-      technologies: ['React', 'SignalR', 'Chart.JS', 'MUI'],
-    },
+    // {
+    //   name: 'PutGang',
+    //   summary:
+    //     'Put Gang is a stock options community that shows how easy it is to profit no matter what happens in the market. We make trading simple!',
+    //   image: putgang,
+    //   link: 'https://www.putgang.com/',
+    //   technologies: ['React', 'SignalR', 'Chart.JS', 'MUI'],
+    // },
     {
       name: '24Hr Doc',
       summary:
