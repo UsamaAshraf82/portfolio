@@ -2,6 +2,7 @@ import hrdoc from '@/public/24hrdoc.png';
 import beiteck from '@/public/beiteck.png';
 import happiness from '@/public/happiness.png';
 import profile from '@/public/profile.jpg';
+import textiletrendz from '@/public/textiletrendz.png';
 
 const info = {
   name: 'Usama Ashraf',
@@ -43,14 +44,15 @@ const info = {
         'React Bootstrap',
       ],
     },
-    // {
-    //   name: 'PutGang',
-    //   summary:
-    //     'Put Gang is a stock options community that shows how easy it is to profit no matter what happens in the market. We make trading simple!',
-    //   image: putgang,
-    //   link: 'https://www.putgang.com/',
-    //   technologies: ['React', 'SignalR', 'Chart.JS', 'MUI'],
-    // },
+    {
+      name: 'Textile Trendz',
+      summary:
+        'Textile Trendz is place to learn about news and trends of Texilte. Information published by qualified Textile experts.',
+      image: textiletrendz,
+      link: 'https://www.textiletrendz.com',
+      technologies: ['React', 'NextJS', 'TailwindCSS','Cloundinary Image Optimization','Sanity'
+    ],
+    },
     {
       name: '24Hr Doc',
       summary:
