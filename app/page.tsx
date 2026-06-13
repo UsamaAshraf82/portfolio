@@ -9,11 +9,7 @@ import { personal } from "@/data/personal";
 
 function Divider() {
   return (
-    <div
-      aria-hidden="true"
-      className="max-w-5xl mx-auto px-6"
-      style={{ height: "1px", background: "rgba(255,255,255,0.05)" }}
-    />
+    <div aria-hidden="true" className="max-w-5xl mx-auto px-6 h-px bg-white/5" />
   );
 }
 
