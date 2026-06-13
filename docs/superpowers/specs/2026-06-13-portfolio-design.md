@@ -94,10 +94,21 @@ data/
 - All 5 projects shown
 - Each `ProjectCard` contains:
   - Project name (bold)
+  - Client/company label (e.g. "Noligy", "Beiteck", "24Hrdoc")
   - Short description (2 sentences max)
   - Tech stack badges
-  - GitHub link + Live Demo link (both open in new tab)
+  - Live Demo link (opens in new tab); GitHub link omitted if private
 - Cards use glassmorphism: semi-transparent background, subtle border, hover glow effect
+
+**Projects data:**
+
+| # | Name | Client | URL | Description |
+|---|---|---|---|---|
+| 1 | Marooze | Noligy | www.marooze.com | Professional platform for creators |
+| 2 | Partut | Noligy | www.partut.com | Creator content selling platform |
+| 3 | Beiteck | Beiteck | www.beiteck.com | Real estate marketplace for Lebanon |
+| 4 | Oikoteck | Beiteck | www.oikoteck.com | Real estate marketplace for Greece |
+| 5 | 24HrDoc | 24Hrdoc | www.24hrdoc.com | Telemedicine platform for the USA |
 
 ### 3.7 Contact
 - Heading: "Let's Work Together"
@@ -145,7 +156,7 @@ User must supply:
 - Profile photo
 - Bio text
 - Work experience entries
-- 5 project entries (name, description, tech tags, GitHub URL, live URL)
+- 5 project entries — URLs and names confirmed; tech tags and descriptions to be finalized during implementation
 - Email, LinkedIn URL, WhatsApp number
 
 ---
