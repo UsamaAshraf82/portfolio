@@ -1,6 +1,6 @@
 @media print {
   @page {
-    margin: 1cm;
+    margin: 0;
   }
 
   /* bg-clip-text gradient is invisible on print — override to solid indigo */
