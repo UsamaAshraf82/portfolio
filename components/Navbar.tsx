@@ -24,7 +24,7 @@ export default function Navbar() {
       }}
     >
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="text-white font-extrabold text-lg tracking-tight">
+        <a href="#" aria-label="Home" className="text-white font-extrabold text-lg tracking-tight">
           {personal.initials}
           <span className="text-violet-500">.</span>
         </a>
@@ -52,6 +52,7 @@ export default function Navbar() {
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
         >
           {menuOpen ? (
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -64,6 +65,7 @@ export default function Navbar() {
       {/* Mobile dropdown */}
       {menuOpen && (
         <div
+          id="mobile-menu"
           className="sm:hidden border-t"
           style={{ borderColor: "rgba(255,255,255,0.07)", background: "rgba(15,12,41,0.97)" }}
         >

@@ -28,7 +28,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.35, delay: i * 0.08 }}
-            className="flex items-center gap-4 rounded-xl px-5 py-4 border transition-all hover:border-violet-500/40 hover:shadow-[0_0_16px_rgba(99,102,241,0.1)]"
+            className="flex items-center gap-4 rounded-xl px-5 py-4 border transition-all hover:border-violet-500/40 hover:shadow-[0_0_16px_rgba(99,102,241,0.1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
             style={{
               background: link.color,
               borderColor: "rgba(255,255,255,0.08)",

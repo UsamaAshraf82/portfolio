@@ -18,7 +18,7 @@ export default function Experience() {
       >
         {experiences.map((exp, i) => (
           <TimelineItem
-            key={exp.company + exp.period}
+            key={`${exp.company}|${exp.period}`}
             experience={exp}
             isLast={i === experiences.length - 1}
           />

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { personal } from "@/data/personal";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Your Name — Full-Stack Engineer",
-  description: "Full-Stack Engineer building scalable web apps with React, Node.js & TypeScript.",
+  title: `${personal.name} — Full-Stack Engineer`,
+  description: personal.tagline,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
