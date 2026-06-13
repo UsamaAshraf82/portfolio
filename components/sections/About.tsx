@@ -25,7 +25,7 @@ export default function About() {
             }}
           >
             <div
-              className="w-full h-full rounded-full overflow-hidden flex items-center justify-center text-white/20 text-3xl font-black"
+              className="w-full h-full rounded-full overflow-hidden flex items-center justify-center text-white/80 text-3xl font-black"
               style={{ background: "#1a1040" }}
             >
               {/* Replace with <img src="/profile.jpg" alt="Profile" className="w-full h-full object-cover" /> once photo is added */}

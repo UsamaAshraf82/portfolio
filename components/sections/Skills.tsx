@@ -13,7 +13,7 @@ export default function Skills() {
         {skillGroups.map((group, i) => (
           <motion.div
             key={group.category}
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.08 }}
