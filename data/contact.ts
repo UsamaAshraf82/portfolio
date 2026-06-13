@@ -9,14 +9,14 @@ export const contactLinks: ContactLink[] = [
   },
   {
     label: "LinkedIn",
-    handle: "linkedin.com/in/yourprofile",
-    href: "https://linkedin.com/in/yourprofile",
+    handle: "linkedin.com/in/muhammad-usama-ashraf-029574128/",
+    href: "https://www.linkedin.com/in/muhammad-usama-ashraf-029574128/",
     color: "rgba(10,102,194,0.15)",
   },
   {
     label: "WhatsApp",
-    handle: "+92 XXX XXX XXXX",
-    href: "https://wa.me/92XXXXXXXXXX",
+    handle: "+92 334 6117844",
+    href: "https://wa.me/923346117844",
     color: "rgba(37,211,102,0.12)",
   },
 ];

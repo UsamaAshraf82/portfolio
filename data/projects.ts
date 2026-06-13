@@ -6,7 +6,7 @@ export const projects: Project[] = [
     name: "Marooze",
     client: "Noligy",
     description: "A professional platform for creators to build their brand and connect with their audience. Features profile management, content publishing, and audience engagement tools.",
-    tags: ["React", "Node.js", "TypeScript", "PostgreSQL"],
+    tags: ["Next.JS", "Node.js", "TypeScript", "MongoDB"],
     liveUrl: "https://www.marooze.com",
   },
   {
@@ -14,7 +14,7 @@ export const projects: Project[] = [
     name: "Partut",
     client: "Noligy",
     description: "A creator content selling platform enabling digital creators to monetize their work directly. Includes product listings, payments, and delivery automation.",
-    tags: ["Next.js", "Node.js", "Stripe", "MongoDB"],
+    tags: ["Next.js", "Nest.js", "Stripe", "MongoDB"],
     liveUrl: "https://www.partut.com",
   },
   {
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     name: "Beiteck",
     client: "Beiteck",
     description: "A full-featured real estate marketplace for Lebanon with property listings, search filters, and agent contact flows.",
-    tags: ["React", "Node.js", "PostgreSQL", "Tailwind CSS"],
+    tags: ["React", "Parse Server", "Tailwind CSS"],
     liveUrl: "https://www.beiteck.com",
   },
   {
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     name: "Oikoteck",
     client: "Beiteck",
     description: "A real estate marketplace for Greece, adapted from the Beiteck platform for the Greek market with localized content and currency.",
-    tags: ["React", "Node.js", "PostgreSQL", "Tailwind CSS"],
+    tags: ["Nest.JS", "Parse Server", "Tailwind CSS"],
     liveUrl: "https://www.oikoteck.com",
   },
   {
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     name: "24HrDoc",
     client: "24Hrdoc",
     description: "A telemedicine platform for the US market connecting patients with licensed physicians for on-demand virtual consultations.",
-    tags: ["Next.js", "TypeScript", "Node.js", "PostgreSQL"],
+    tags: ["Next.js", "Parse Server", "Nest.js"],
     liveUrl: "https://www.24hrdoc.com",
   },
 ];
