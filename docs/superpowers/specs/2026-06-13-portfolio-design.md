@@ -55,7 +55,7 @@ data/
 - Logo: initials + purple dot (e.g. `YN.`)
 - Nav links: About · Skills · Experience · Projects · Contact
 - Smooth scroll to section anchors on click
-- On mobile: hamburger menu or just horizontal scroll
+- On mobile: hamburger menu toggling a full-width dropdown nav
 
 ### 3.2 Hero
 - Full-viewport-height section with the page's gradient background
