@@ -30,6 +30,7 @@ export interface ContactLink {
 export interface Personal {
   name: string;
   initials: string;
+  title: string;
   tagline: string;
   bio: string;
   resumeUrl: string;

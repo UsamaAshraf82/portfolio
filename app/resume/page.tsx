@@ -99,7 +99,7 @@ export default function ResumePage() {
               {personal.name}
             </div>
             <div className="identity-title" style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, marginTop: 4 }}>
-              Full-Stack Developer
+              {personal.title}
             </div>
           </div>
 
@@ -127,7 +127,7 @@ export default function ResumePage() {
                   GitHub
                 </div>
                 <div className="contact-value" style={{ fontSize: 11, color: "rgba(255,255,255,0.7)" }}>
-                  usamaashraf82
+                  {personal.github.replace("https://github.com/", "")}
                 </div>
               </div>
             </div>
@@ -253,16 +253,22 @@ export default function ResumePage() {
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px 24px" }}>
               {projects.map((project) => (
                 <div key={project.id}>
-                  <a
-                    className="project-name-link"
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ fontSize: 13, fontWeight: 600, color: "rgba(255,255,255,0.85)", textDecoration: "none" }}
-                  >
-                    {project.name}{" "}
-                    <span style={{ fontSize: 10, color: "#6366f1" }}>↗</span>
-                  </a>
+                  {project.liveUrl ? (
+                    <a
+                      className="project-name-link"
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ fontSize: 13, fontWeight: 600, color: "rgba(255,255,255,0.85)", textDecoration: "none" }}
+                    >
+                      {project.name}{" "}
+                      <span style={{ fontSize: 10, color: "#6366f1" }}>↗</span>
+                    </a>
+                  ) : (
+                    <span className="project-name-link" style={{ fontSize: 13, fontWeight: 600, color: "rgba(255,255,255,0.85)" }}>
+                      {project.name}
+                    </span>
+                  )}
                   <div className="project-meta" style={{ fontSize: 11, color: "rgba(255,255,255,0.35)", marginTop: 2 }}>
                     {project.client} · {project.description.split(".")[0]}
                   </div>

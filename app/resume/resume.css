@@ -33,7 +33,7 @@
     color: #3730a3 !important;
   }
 
-  .section-label::after {
+  .section-label > span {
     background: #c7d2fe !important;
   }
 
