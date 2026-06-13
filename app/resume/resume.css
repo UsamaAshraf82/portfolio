@@ -3,88 +3,10 @@
     margin: 1cm;
   }
 
-  body {
-    background: white !important;
-    color: black !important;
-  }
-
-  .no-print {
-    display: none !important;
-  }
-
-  .resume-card {
-    border: none !important;
-    background: white !important;
-    box-shadow: none !important;
-  }
-
-  .sidebar {
-    background: #f5f5f5 !important;
-    border-right: 1px solid #ddd !important;
-  }
-
-  .identity-name {
+  /* bg-clip-text gradient is invisible on print — override to solid indigo */
+  .name-gradient {
     background: none !important;
     -webkit-text-fill-color: #3730a3 !important;
     color: #3730a3 !important;
-  }
-
-  .section-label {
-    color: #3730a3 !important;
-  }
-
-  .section-label > span {
-    background: #c7d2fe !important;
-  }
-
-  .sidebar-section-label,
-  .contact-label,
-  .skill-group-name {
-    color: #6b7280 !important;
-  }
-
-  .contact-value,
-  .identity-title,
-  .exp-desc,
-  .project-meta,
-  .bio {
-    color: #374151 !important;
-  }
-
-  .exp-company,
-  .edu-school,
-  .project-name-link {
-    color: #111827 !important;
-  }
-
-  .exp-period,
-  .edu-period,
-  .exp-dot,
-  .current-badge {
-    color: #3730a3 !important;
-  }
-
-  .exp-title {
-    color: #6b7280 !important;
-  }
-
-  .skill-tag {
-    background: #e0e7ff !important;
-    border-color: #c7d2fe !important;
-    color: #3730a3 !important;
-  }
-
-  .project-tag {
-    background: #e0e7ff !important;
-    color: #3730a3 !important;
-  }
-
-  .exp-line {
-    background: #c7d2fe !important;
-  }
-
-  .current-badge {
-    background: #e0e7ff !important;
-    border-color: #c7d2fe !important;
   }
 }

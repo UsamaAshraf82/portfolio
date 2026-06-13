@@ -11,122 +11,61 @@ import "./resume.css";
 
 export default function ResumePage() {
   return (
-    <div
-      style={{
-        background: "linear-gradient(160deg, #0f0c29 0%, #1a1040 50%, #0f172a 100%)",
-        minHeight: "100vh",
-        padding: "24px 16px",
-        fontFamily: "inherit",
-      }}
-    >
+    <div className="min-h-screen px-4 py-6 bg-[linear-gradient(160deg,#0f0c29_0%,#1a1040_50%,#0f172a_100%)] print:bg-white">
+
       {/* Top bar */}
-      <div
-        className="no-print"
-        style={{
-          maxWidth: 860,
-          margin: "0 auto 20px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
+      <div className="max-w-[860px] mx-auto mb-5 flex justify-between items-center print:hidden">
         <Link
           href="/"
-          style={{ color: "rgba(255,255,255,0.35)", fontSize: 13, textDecoration: "none" }}
+          className="text-white/35 text-[13px] no-underline hover:text-white/70 transition-colors"
         >
           ← Back to Portfolio
         </Link>
         <button
           onClick={() => window.print()}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 8,
-            padding: "8px 18px",
-            borderRadius: 999,
-            border: "1px solid rgba(139,92,246,0.4)",
-            background: "rgba(99,102,241,0.1)",
-            color: "#a78bfa",
-            fontSize: 12,
-            fontWeight: 600,
-            cursor: "pointer",
-          }}
+          className="flex items-center gap-2 px-[18px] py-2 rounded-full border border-violet-500/40 bg-indigo-500/10 text-violet-400 text-[12px] font-semibold cursor-pointer hover:bg-indigo-500/20 transition-colors"
         >
           ⬇ Print / Save as PDF
         </button>
       </div>
 
       {/* Resume card */}
-      <div
-        className="resume-card"
-        style={{
-          maxWidth: 860,
-          margin: "0 auto",
-          background: "rgba(255,255,255,0.03)",
-          border: "1px solid rgba(255,255,255,0.07)",
-          borderRadius: 16,
-          overflow: "hidden",
-          display: "grid",
-          gridTemplateColumns: "240px 1fr",
-        }}
-      >
+      <div className="max-w-[860px] mx-auto bg-white/[0.03] border border-white/[0.07] rounded-2xl overflow-hidden grid grid-cols-[240px_1fr] print:border-0 print:bg-white print:rounded-none print:shadow-none">
+
         {/* Sidebar */}
-        <aside
-          className="sidebar"
-          style={{
-            background: "rgba(99,102,241,0.06)",
-            borderRight: "1px solid rgba(255,255,255,0.06)",
-            padding: "36px 24px",
-            display: "flex",
-            flexDirection: "column",
-            gap: 28,
-          }}
-        >
+        <aside className="bg-indigo-500/[0.06] border-r border-white/[0.06] p-9 flex flex-col gap-7 print:bg-gray-50 print:border-r print:border-gray-200">
+
           {/* Identity */}
-          <div style={{ borderBottom: "1px solid rgba(255,255,255,0.07)", paddingBottom: 24 }}>
-            <div
-              className="identity-name"
-              style={{
-                fontSize: 20,
-                fontWeight: 800,
-                letterSpacing: "-0.02em",
-                background: "linear-gradient(to right, #6366f1, #a78bfa)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
+          <div className="border-b border-white/[0.07] pb-6 print:border-gray-200">
+            <div className="name-gradient text-xl font-black tracking-[-0.02em] bg-gradient-to-r from-indigo-500 to-violet-400 bg-clip-text text-transparent">
               {personal.name}
             </div>
-            <div className="identity-title" style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, marginTop: 4 }}>
+            <div className="text-[12px] text-white/45 mt-1 print:text-gray-600">
               {personal.title}
             </div>
           </div>
 
           {/* Contact */}
           <div>
-            <div
-              className="sidebar-section-label"
-              style={{ fontSize: 9, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: 10 }}
-            >
+            <div className="text-[9px] font-bold tracking-[0.15em] uppercase text-white/30 mb-2.5 print:text-gray-400">
               Contact
             </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
+            <div className="flex flex-col gap-[7px]">
               {contactLinks.map((c) => (
                 <div key={c.label}>
-                  <div className="contact-label" style={{ fontSize: 9, color: "rgba(255,255,255,0.3)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+                  <div className="text-[9px] text-white/30 uppercase tracking-[0.08em] print:text-gray-400">
                     {c.label}
                   </div>
-                  <div className="contact-value" style={{ fontSize: 11, color: "rgba(255,255,255,0.7)", wordBreak: "break-all" }}>
+                  <div className="text-[11px] text-white/70 break-all print:text-gray-700">
                     {c.handle}
                   </div>
                 </div>
               ))}
               <div>
-                <div className="contact-label" style={{ fontSize: 9, color: "rgba(255,255,255,0.3)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+                <div className="text-[9px] text-white/30 uppercase tracking-[0.08em] print:text-gray-400">
                   GitHub
                 </div>
-                <div className="contact-value" style={{ fontSize: 11, color: "rgba(255,255,255,0.7)" }}>
+                <div className="text-[11px] text-white/70 print:text-gray-700">
                   {personal.github.replace("https://github.com/", "")}
                 </div>
               </div>
@@ -135,30 +74,19 @@ export default function ResumePage() {
 
           {/* Skills */}
           <div>
-            <div
-              className="sidebar-section-label"
-              style={{ fontSize: 9, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: 10 }}
-            >
+            <div className="text-[9px] font-bold tracking-[0.15em] uppercase text-white/30 mb-2.5 print:text-gray-400">
               Skills
             </div>
             {skillGroups.map((group) => (
-              <div key={group.category} style={{ marginBottom: 12 }}>
-                <div className="skill-group-name" style={{ fontSize: 10, color: "rgba(255,255,255,0.4)", marginBottom: 6 }}>
+              <div key={group.category} className="mb-3">
+                <div className="text-[10px] text-white/40 mb-1.5 print:text-gray-500">
                   {group.category}
                 </div>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
+                <div className="flex flex-wrap gap-1">
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="skill-tag"
-                      style={{
-                        background: "rgba(99,102,241,0.15)",
-                        border: "1px solid rgba(99,102,241,0.2)",
-                        color: "#a78bfa",
-                        fontSize: 10,
-                        padding: "2px 8px",
-                        borderRadius: 4,
-                      }}
+                      className="bg-indigo-500/15 border border-indigo-500/20 text-violet-400 text-[10px] px-2 py-0.5 rounded print:bg-indigo-100 print:border-indigo-200 print:text-indigo-700"
                     >
                       {skill}
                     </span>
@@ -170,12 +98,12 @@ export default function ResumePage() {
         </aside>
 
         {/* Main */}
-        <main style={{ padding: "36px 32px", display: "flex", flexDirection: "column", gap: 32 }}>
+        <main className="p-9 flex flex-col gap-8 print:p-8">
 
           {/* Summary */}
           <section>
             <SectionLabel>Summary</SectionLabel>
-            <p className="bio" style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", lineHeight: 1.7 }}>
+            <p className="text-[13px] text-white/55 leading-[1.7] print:text-gray-600">
               {personal.bio}
             </p>
           </section>
@@ -186,60 +114,32 @@ export default function ResumePage() {
             {experiences.map((exp, i) => (
               <div
                 key={`${exp.company}|${exp.period}`}
-                style={{
-                  display: "flex",
-                  gap: 16,
-                  paddingBottom: i < experiences.length - 1 ? 20 : 0,
-                  borderBottom: i < experiences.length - 1 ? "1px solid rgba(255,255,255,0.04)" : "none",
-                  marginBottom: i < experiences.length - 1 ? 20 : 0,
-                }}
+                className={`flex gap-4 ${i < experiences.length - 1 ? "pb-5 mb-5 border-b border-white/[0.04] print:border-gray-100" : ""}`}
               >
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center", paddingTop: 4 }}>
-                  <div
-                    className="exp-dot"
-                    style={{
-                      width: 8,
-                      height: 8,
-                      borderRadius: "50%",
-                      background: exp.isCurrent ? "#6366f1" : "rgba(99,102,241,0.4)",
-                      flexShrink: 0,
-                    }}
-                  />
+                <div className="flex flex-col items-center pt-1">
+                  <div className={`w-2 h-2 rounded-full shrink-0 print:bg-indigo-700 ${exp.isCurrent ? "bg-indigo-500" : "bg-indigo-500/40"}`} />
                   {i < experiences.length - 1 && (
-                    <div className="exp-line" style={{ flex: 1, width: 1, background: "rgba(99,102,241,0.2)", marginTop: 4 }} />
+                    <div className="flex-1 w-px bg-indigo-500/20 mt-1 print:bg-indigo-200" />
                   )}
                 </div>
-                <div style={{ flex: 1 }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 2 }}>
-                    <span className="exp-company" style={{ fontSize: 14, fontWeight: 700, color: "rgba(255,255,255,0.9)" }}>
+                <div className="flex-1">
+                  <div className="flex justify-between items-baseline mb-0.5">
+                    <span className="text-[14px] font-bold text-white/90 print:text-gray-900">
                       {exp.company}
                       {exp.isCurrent && (
-                        <span
-                          className="current-badge"
-                          style={{
-                            display: "inline-block",
-                            fontSize: 9,
-                            padding: "1px 6px",
-                            borderRadius: 3,
-                            background: "rgba(99,102,241,0.15)",
-                            color: "#a78bfa",
-                            border: "1px solid rgba(99,102,241,0.3)",
-                            marginLeft: 6,
-                            verticalAlign: "middle",
-                          }}
-                        >
+                        <span className="inline-block text-[9px] px-1.5 py-0.5 rounded bg-indigo-500/15 text-violet-400 border border-indigo-500/30 ml-1.5 align-middle print:bg-indigo-100 print:text-indigo-700 print:border-indigo-200">
                           Current
                         </span>
                       )}
                     </span>
-                    <span className="exp-period" style={{ fontSize: 11, color: "#6366f1", fontWeight: 500 }}>
+                    <span className="text-[11px] text-indigo-400 font-medium print:text-indigo-700">
                       {exp.period}
                     </span>
                   </div>
-                  <div className="exp-title" style={{ fontSize: 11, color: "rgba(255,255,255,0.4)", marginBottom: 6 }}>
+                  <div className="text-[11px] text-white/40 mb-1.5 print:text-gray-500">
                     {exp.title}
                   </div>
-                  <div className="exp-desc" style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.6 }}>
+                  <div className="text-[12px] text-white/50 leading-[1.6] print:text-gray-600">
                     {exp.description}
                   </div>
                 </div>
@@ -250,40 +150,32 @@ export default function ResumePage() {
           {/* Projects */}
           <section>
             <SectionLabel>Projects</SectionLabel>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px 24px" }}>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-4">
               {projects.map((project) => (
                 <div key={project.id}>
                   {project.liveUrl ? (
                     <a
-                      className="project-name-link"
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      style={{ fontSize: 13, fontWeight: 600, color: "rgba(255,255,255,0.85)", textDecoration: "none" }}
+                      className="text-[13px] font-semibold text-white/85 no-underline hover:text-violet-400 transition-colors print:text-gray-900"
                     >
                       {project.name}{" "}
-                      <span style={{ fontSize: 10, color: "#6366f1" }}>↗</span>
+                      <span className="text-[10px] text-indigo-400 print:text-indigo-600">↗</span>
                     </a>
                   ) : (
-                    <span className="project-name-link" style={{ fontSize: 13, fontWeight: 600, color: "rgba(255,255,255,0.85)" }}>
+                    <span className="text-[13px] font-semibold text-white/85 print:text-gray-900">
                       {project.name}
                     </span>
                   )}
-                  <div className="project-meta" style={{ fontSize: 11, color: "rgba(255,255,255,0.35)", marginTop: 2 }}>
+                  <div className="text-[11px] text-white/35 mt-0.5 print:text-gray-500">
                     {project.client} · {project.description.split(".")[0]}
                   </div>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: 3, marginTop: 5 }}>
+                  <div className="flex flex-wrap gap-[3px] mt-1.5">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="project-tag"
-                        style={{
-                          background: "rgba(99,102,241,0.1)",
-                          color: "rgba(139,92,246,0.75)",
-                          fontSize: 9,
-                          padding: "1px 5px",
-                          borderRadius: 3,
-                        }}
+                        className="bg-indigo-500/10 text-violet-400/75 text-[9px] px-[5px] py-px rounded print:bg-indigo-100 print:text-indigo-700"
                       >
                         {tag}
                       </span>
@@ -297,16 +189,16 @@ export default function ResumePage() {
           {/* Education */}
           <section>
             <SectionLabel>Education</SectionLabel>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
+            <div className="flex justify-between items-baseline">
               <div>
-                <div className="edu-school" style={{ fontSize: 14, fontWeight: 700, color: "rgba(255,255,255,0.85)" }}>
+                <div className="text-[14px] font-bold text-white/85 print:text-gray-900">
                   {education.institution}
                 </div>
-                <div className="edu-sub" style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", marginTop: 2 }}>
+                <div className="text-[12px] text-white/40 mt-0.5 print:text-gray-500">
                   {education.campus}
                 </div>
               </div>
-              <div className="edu-period" style={{ fontSize: 11, color: "#6366f1", fontWeight: 500 }}>
+              <div className="text-[11px] text-indigo-400 font-medium print:text-indigo-700">
                 {education.period}
               </div>
             </div>
@@ -320,22 +212,9 @@ export default function ResumePage() {
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <div
-      className="section-label"
-      style={{
-        fontSize: 9,
-        fontWeight: 700,
-        letterSpacing: "0.15em",
-        textTransform: "uppercase",
-        color: "#6366f1",
-        marginBottom: 14,
-        display: "flex",
-        alignItems: "center",
-        gap: 8,
-      }}
-    >
+    <div className="text-[9px] font-bold tracking-[0.15em] uppercase text-indigo-500 mb-3.5 flex items-center gap-2 print:text-indigo-700">
       {children}
-      <span style={{ flex: 1, height: 1, background: "rgba(99,102,241,0.2)", display: "block" }} />
+      <span className="flex-1 h-px bg-indigo-500/20 block print:bg-indigo-200" />
     </div>
   );
 }
