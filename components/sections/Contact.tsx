@@ -23,7 +23,7 @@ export default function Contact() {
             key={link.label}
             href={link.href}
             target={link.label !== "Email" ? "_blank" : undefined}
-            rel="noopener noreferrer"
+            rel={link.label !== "Email" ? "noopener noreferrer" : undefined}
             initial={{ opacity: 0, x: -16 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
