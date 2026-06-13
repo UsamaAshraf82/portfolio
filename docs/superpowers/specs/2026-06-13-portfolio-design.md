@@ -97,7 +97,7 @@ data/
   - Client/company label (e.g. "Noligy", "Beiteck", "24Hrdoc")
   - Short description (2 sentences max)
   - Tech stack badges
-  - Live Demo link (opens in new tab); GitHub link omitted if private
+  - Live Demo link only (opens in new tab); no GitHub links — all projects are client work with private repos
 - Cards use glassmorphism: semi-transparent background, subtle border, hover glow effect
 
 **Projects data:**
