@@ -1,5 +1,4 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
 import { personal } from "@/data/personal";
 import { contactLinks } from "@/data/contact";
@@ -7,7 +6,16 @@ import { skillGroups } from "@/data/skills";
 import { experiences } from "@/data/experience";
 import { projects } from "@/data/projects";
 import { education } from "@/data/education";
+import PrintButton from "./PrintButton";
 import "./resume.css";
+
+export const metadata: Metadata = {
+  title: `${personal.name} Resume`,
+  description: `Resume for ${personal.name}, a full-stack developer specializing in React, Next.js, Node.js, and TypeScript.`,
+  alternates: {
+    canonical: "/resume",
+  },
+};
 
 export default function ResumePage() {
   return (
@@ -21,12 +29,7 @@ export default function ResumePage() {
         >
           ← Back to Portfolio
         </Link>
-        <button
-          onClick={() => window.print()}
-          className="flex items-center gap-2 px-[18px] py-2 rounded-full border border-violet-500/40 bg-indigo-500/10 text-violet-400 text-[12px] font-semibold cursor-pointer hover:bg-indigo-500/20 transition-colors"
-        >
-          ⬇ Print / Save as PDF
-        </button>
+        <PrintButton />
       </div>
 
       {/* Resume card */}
