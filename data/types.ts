@@ -4,7 +4,8 @@ export interface Project {
   client: string;
   description: string;
   tags: string[];
-  liveUrl: string;
+  liveUrl?: string;
+  closedDate?: string;
 }
 
 export interface SkillGroup {

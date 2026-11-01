@@ -156,7 +156,7 @@ export default function ResumePage() {
             <div className="grid grid-cols-2 gap-x-6 gap-y-4 print:gap-y-2">
               {projects.map((project) => (
                 <div key={project.id}>
-                  {project.liveUrl ? (
+                  {project.liveUrl && !project.closedDate ? (
                     <a
                       href={project.liveUrl}
                       target="_blank"
@@ -170,6 +170,11 @@ export default function ResumePage() {
                     <span className="text-[13px] font-semibold text-white/85 print:text-gray-900">
                       {project.name}
                     </span>
+                  )}
+                  {project.closedDate && (
+                    <div className="text-[11px] text-white/50 mt-0.5 print:text-gray-600">
+                      Shut down in {project.closedDate}
+                    </div>
                   )}
                   <div className="text-[11px] text-white/35 mt-0.5 print:text-gray-500">
                     {project.client} · {project.description.split(".")[0]}

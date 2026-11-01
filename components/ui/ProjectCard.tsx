@@ -24,14 +24,21 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <SkillBadge key={tag} skill={tag} />
         ))}
       </div>
-      <a
-        href={project.liveUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-indigo-400 text-xs font-medium hover:text-violet-400 transition-colors mt-1 w-fit"
-      >
-        Live Demo ↗
-      </a>
+      {project.closedDate && (
+        <p className="text-white/50 text-xs mt-1">
+          Shut down in {project.closedDate}
+        </p>
+      )}
+      {project.liveUrl && !project.closedDate && (
+        <a
+          href={project.liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-indigo-400 text-xs font-medium hover:text-violet-400 transition-colors mt-1 w-fit"
+        >
+          Live Demo ↗
+        </a>
+      )}
     </div>
   );
 }

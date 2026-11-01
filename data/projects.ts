@@ -2,12 +2,28 @@ import type { Project } from "./types";
 
 export const projects: Project[] = [
   {
+    id: "taios",
+    name: "TAIOS",
+    client: "Personal Project",
+    description: "An AI-powered clinical operating system with five specialized agents for patient intake, triage, provider summaries, follow-ups, and prescription refill workflows. Supports white-label patient portals and multi-tenant clinic management.",
+    tags: ["AI Agents", "Healthcare", "Multi-Tenant", "Stripe"],
+    liveUrl: "https://taios.newbytesolutions.com",
+  },
+  {
+    id: "similarity-ai",
+    name: "Similarity AI",
+    client: "Personal Project",
+    description: "An image matching platform that helps marketplaces detect reused and edited listing photos. Provides API integration, batch indexing, and geometric evidence to support fraud review workflows.",
+    tags: ["Image Matching", "Computer Vision", "API", "Fraud Detection"],
+    liveUrl: "https://similarity.newbytesolutions.com",
+  },
+  {
     id: "marooze",
     name: "Marooze",
     client: "Noligy",
-    description: "A professional platform for creators to build their brand and connect with their audience. Features profile management, content publishing, and audience engagement tools.",
+    description: "A professional platform that helped creators build their brand and connect with their audience. Featured profile management, content publishing, and audience engagement tools.",
     tags: ["Next.JS", "Node.js", "TypeScript", "MongoDB"],
-    liveUrl: "https://www.marooze.com",
+    closedDate: "June 2026",
   },
   {
     id: "partut",
@@ -40,5 +56,13 @@ export const projects: Project[] = [
     description: "A telemedicine platform for the US market connecting patients with licensed physicians for on-demand virtual consultations.",
     tags: ["Next.js", "Parse Server", "Nest.js"],
     liveUrl: "https://www.24hrdoc.com",
+  },
+  {
+    id: "toothache-treatment",
+    name: "Toothache Treatment",
+    client: "24Hrdoc",
+    description: "A separate dental telehealth website developed as part of 24HrDoc from 2026, connecting patients with licensed dental providers through online symptom assessments. Supports personalized treatment plans and prescriptions when appropriate.",
+    tags: ["Telehealth", "Dental Care", "Online Assessments"],
+    liveUrl: "https://www.toothachetreatment.com",
   },
 ];
